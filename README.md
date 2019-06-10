@@ -12,7 +12,7 @@ It's therefore required that `phpinsights` is set as a dependency in your projec
 
 An example Workflow can look like this.
 
-```
+```terraform
 workflow "phpinsights" {
   on = "push"
   resolves = [
@@ -36,7 +36,7 @@ action "phpinsights" {
 
 You can pass any valid `phpinsights` argument to the Action. In this example, all issues are always displayed and a minimum value of 80 has to be achieved in all categories.
 
-```
+```terraform
 action "phpinsights" {
   needs = ["composer install"]
   uses = "stefanzweifel/laravel-phpinsights-action@v1.0.0"
