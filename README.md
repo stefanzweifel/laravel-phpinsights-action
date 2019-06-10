@@ -1,6 +1,6 @@
 # laravel-phpinsights-action
 
-This GitHub Action executes Laravel Artisan Command oƒ [phpinsights](https://github.com/nunomaduro/phpinsights). The output of the Insights Command can be viewed in the Actions log.
+This GitHub Action executes Laravel Artisan Command of [phpinsights](https://github.com/nunomaduro/phpinsights). The output of the Insights Command can be viewed in the Actions log.
 
 You can optionally define minimum values for Insights categories. If the value falls below your given threshold, the run fails.
 
