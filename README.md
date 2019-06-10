@@ -6,7 +6,7 @@ You can optionally define minimum values for Insights categories. If the value f
 
 ### Usage
 
-This action doesn't install composer dependencies on it's own and doesn't contain a `phpinsights` binary.
+This Action doesn't install composer dependencies on it's own and doesn't contain a `phpinsights` binary.
 
 It's therefore required that `phpinsights` is set as a dependency in your project and that another Action installs the composer dependencies.
 
