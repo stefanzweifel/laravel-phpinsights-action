@@ -2,7 +2,7 @@ FROM php:7.3-cli-alpine
 
 LABEL "com.github.actions.name"="Laravel PHP Insights Action"
 LABEL "com.github.actions.description"="Run PHP Insights"
-LABEL "com.github.actions.icon"="check"
+LABEL "com.github.actions.icon"="bar-chart-2"
 LABEL "com.github.actions.color"="blue"
 
 LABEL "repository"="http://github.com/stefanzweifel/laravel-phpinsights-action"
