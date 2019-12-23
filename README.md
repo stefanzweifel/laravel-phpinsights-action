@@ -12,23 +12,22 @@ It's therefore required that `phpinsights` is set as a dependency in your projec
 
 An example Workflow can look like this.
 
-```terraform
-workflow "phpinsights" {
-  on = "push"
-  resolves = [
-    "phpinsights"
-  ]
-}
+```yaml
+name: PHP Insights
 
-action "composer install" {
-  uses = "MilesChou/composer-action@master"
-  args = "install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist"
-}
+on: push
 
-action "phpinsights" {
-  needs = ["composer install"]
-  uses = "stefanzweifel/laravel-phpinsights-action@v1.0.0"
-}
+jobs:
+  phpinsights:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - uses: MilesChou/composer-action@master
+      with:
+        args: install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+
+    - uses: stefanzweifel/stefanzweifel/laravel-phpinsights-action@v1.0.0
 ```
 
 
@@ -36,12 +35,24 @@ action "phpinsights" {
 
 You can pass any valid `phpinsights` argument to the Action. In this example, all issues are always displayed and a minimum value of 80 has to be achieved in all categories.
 
-```terraform
-action "phpinsights" {
-  needs = ["composer install"]
-  uses = "stefanzweifel/laravel-phpinsights-action@v1.0.0"
-  args = "-v --min-quality=80 --min-complexity=80 --min-architecture=80 --min-style=80"
-}
+```yaml
+name: PHP Insights
+
+on: push
+
+jobs:
+  phpinsights:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - uses: MilesChou/composer-action@master
+      with:
+        args: install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+
+    - uses: stefanzweifel/stefanzweifel/laravel-phpinsights-action@v1.0.0
+      with:
+        args: -v --min-quality=80 --min-complexity=80 --min-architecture=80 --min-style=80 --disable-security-check
 ```
 
 ## Versioning
