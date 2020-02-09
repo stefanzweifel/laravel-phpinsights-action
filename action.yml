@@ -1,0 +1,12 @@
+name: Laravel PHP Insights Action
+description: Run PHP Insights
+
+author: Stefan Zweifel <hello@stefanzweifel.io>
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: bar-chart-2
+  color: blue
