@@ -27,7 +27,7 @@ jobs:
       with:
         args: install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
 
-    - uses: stefanzweifel/stefanzweifel/laravel-phpinsights-action@v1.0.0
+    - uses: stefanzweifel/stefanzweifel/laravel-phpinsights-action@v1.1.0
 ```
 
 
@@ -50,7 +50,7 @@ jobs:
       with:
         args: install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
 
-    - uses: stefanzweifel/stefanzweifel/laravel-phpinsights-action@v1.0.0
+    - uses: stefanzweifel/stefanzweifel/laravel-phpinsights-action@v1.1.0
       with:
         args: -v --min-quality=80 --min-complexity=80 --min-architecture=80 --min-style=80 --disable-security-check
 ```
