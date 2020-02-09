@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/stefanzweifel/laravel-phpinsights-action/compare/v1.0.0...HEAD)
 
+## [v2.0.0](https://github.com/stefanzweifel/laravel-phpinsights-action/compare/v1.0.0...v2.0.0) - 2020-02-09
+
+### Added
+- Add `action.yml` [#1](https://github.com/stefanzweifel/laravel-phpinsights-action/pull/1)
+
 ## v1.0.0 - 2019-06-10
 
 ### Added
