@@ -1,4 +1,4 @@
-FROM php:7.3-cli-alpine
+FROM php:7.4.2-cli-alpine
 
 LABEL "com.github.actions.name"="Laravel PHP Insights Action"
 LABEL "com.github.actions.description"="Run PHP Insights"
