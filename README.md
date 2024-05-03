@@ -1,5 +1,28 @@
 # laravel-phpinsights-action
 
+> [!WARNING]
+> This Action has been archived.    
+> If you want to run [phpinsights](https://github.com/nunomaduro/phpinsights) in your project, you can achieve this by using a simple workflow like this.
+
+```yaml
+name: PHP Insights
+on: push
+jobs:
+  phpinsights:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: shivammathur/setup-php@v2
+
+    - uses: ramsey/composer-install@v3
+
+    - name: Run phpinsights
+      run: php artisan insights -n
+```
+
+---
+
 This GitHub Action executes Laravel Artisan Command of [phpinsights](https://github.com/nunomaduro/phpinsights). The output of the Insights Command can be viewed in the Actions log.
 
 You can optionally define minimum values for Insights categories. If the value falls below your given threshold, the run fails.
